@@ -1,5 +1,8 @@
 package hello;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Permission {
 	
 	private final long id;
@@ -18,5 +21,14 @@ public class Permission {
 	public String getDescription() {
 		return description;
 	}
+
+	@Override
+	public String toString() {
+		return "Permission{" +
+				"id='" + id + '\'' +
+				", description=" + description + 
+				'}';
+	}
 	
+
 }

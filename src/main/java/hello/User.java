@@ -22,5 +22,10 @@ public class User {
 	public String getBirthday() {
 		return birthday;
 	}
+
+	@Override
+	public String toString() {
+		return "User {id='" + id + "', name='" + name + "', birthday='" + birthday + "}";
+	}
 	
 }
